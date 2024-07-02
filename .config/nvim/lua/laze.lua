@@ -17,7 +17,7 @@ local function ensure_lazy_installed(lazypath)
     vim.opt.rtp:prepend(lazypath)
 end
 
-ensure_lazy_installed(fn.stdpath("data") .. "/site/pack/packer/start/lazy.nvim")
+ensure_lazy_installed(fn.stdpath("data") .. "/lazy/lazy.nvim")
 
 require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
     checker = {
@@ -26,5 +26,5 @@ require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
     },
     change_detection = {
         notify = false,
-    }
+    },
 })
