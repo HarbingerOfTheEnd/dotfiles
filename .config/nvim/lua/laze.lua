@@ -19,12 +19,21 @@ end
 
 ensure_lazy_installed(fn.stdpath("data") .. "/lazy/lazy.nvim")
 
-require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
-    checker = {
-        enabled = true,
-        notify = false,
+require("lazy").setup(
+    {
+        { import = "plugins" },
+        { import = "plugins.lsp" },
+        { import = "plugins.rust" },
+        { import = "plugins.dap" },
+        { import = "plugins.go" },
     },
-    change_detection = {
-        notify = false,
-    },
-})
+    {
+        checker = {
+            enabled = true,
+            notify = false,
+        },
+        change_detection = {
+            notify = false,
+        },
+    }
+)
