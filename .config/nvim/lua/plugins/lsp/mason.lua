@@ -33,14 +33,19 @@ return {
                 "pyright",
                 "rust_analyzer",
                 "zls",
+                "gopls",
             },
         })
 
         mason_tool_installer.setup({
             ensure_installed = {
                 "biome",
+                "golines",
                 "stylua",
+                "js-debug-adapter",
                 "ruff",
+                "goimports-reviser",
+                "eslint-lsp",
             },
         })
     end,
