@@ -1,3 +1,11 @@
+local function organize_imports()
+    local params = {
+        command = "_typescript.organizeImports",
+        arguments = { vim.api.nvim_buf_get_name(0) },
+    }
+    vim.lsp.buf.execute_command(params)
+end
+
 return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
@@ -70,6 +78,7 @@ return {
                     capabilities = capabilities,
                 })
             end,
+            ["rust_analyzer"] = function() end,
             ["svelte"] = function()
                 lspconfig["svelte"].setup({
                     capabilities = capabilities,
@@ -104,6 +113,22 @@ return {
                     },
                 })
             end,
+            tsserver = function()
+                lspconfig.tsserver.setup({
+                    capabilities = capabilities,
+                    init_options = {
+                        preferences = {
+                            disableSuggestions = true,
+                        },
+                    },
+                    commands = {
+                        OrganizeImports = {
+                            organize_imports,
+                            description = "Organize Imports",
+                        },
+                    },
+                })
+            end,
             ["lua_ls"] = function()
                 lspconfig["lua_ls"].setup({
                     capabilities = capabilities,
@@ -120,5 +145,6 @@ return {
                 })
             end,
         })
+        vim.keymap.set("n", "<S-A-o>", organize_imports, { desc = "Organize imports" })
     end,
 }
