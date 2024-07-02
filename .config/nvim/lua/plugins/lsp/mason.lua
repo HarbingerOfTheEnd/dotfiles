@@ -38,10 +38,10 @@ return {
 
         mason_tool_installer.setup({
             ensure_installed = {
-                "biomejs",
+                "biome",
                 "stylua",
                 "ruff",
-            }
+            },
         })
     end,
 }
