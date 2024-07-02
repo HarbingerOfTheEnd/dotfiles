@@ -6,6 +6,8 @@ return {
 
         conform.setup({
             formatters_by_ft = {
+                c = { "clang-format" },
+                cpp = { "clang-format" },
                 javascript = { { "biomejs", "prettier" } },
                 typescript = { { "biomejs", "prettier" } },
                 javascriptreact = { { "biomejs", "prettier" } },
@@ -19,6 +21,7 @@ return {
                 graphql = { { "biomejs", "prettier" } },
                 liquid = { { "biomejs", "prettier" } },
                 lua = { "stylua" },
+                go = { "gofumpt", "goimports-reviser", "golines" },
                 python = function(bufnr)
                     if require("conform").get_formatter_info("ruff_format", bufnr).available then
                         return { "ruff_format", "ruff_fix", "ruff_organize_imports" }
@@ -31,6 +34,14 @@ return {
                 ls_format = "fallback",
                 async = false,
                 timeout_ms = 1000,
+            },
+            formatters = {
+                ["clang-format"] = {
+                    args = { "-style={BasedOnStyle: Google, IndentWidth: 4}" },
+                },
+                ["goimports-reviser"] = {
+                    prepend_args = { "-rm-unused" },
+                },
             },
         })
 
