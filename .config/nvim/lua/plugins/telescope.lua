@@ -32,10 +32,10 @@ return {
                     hidden = true,
                 },
                 live_grep = {
-                    hidden = true,
+                    additional_args = { "--hidden" },
                 },
                 grep_string = {
-                    hidden = true,
+                    additional_args = { "--hidden" },
                 },
             },
         })
