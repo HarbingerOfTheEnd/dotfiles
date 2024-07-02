@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom"
-export NVM_DIR="$XDG_CONFIG_HOME/.config/nvm"
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 . $HOME/.cargo/env
 export BUN_INSTALL="$HOME/.bun"
