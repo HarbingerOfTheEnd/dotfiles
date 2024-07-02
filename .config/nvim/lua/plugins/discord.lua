@@ -1,0 +1,3 @@
+return {
+	"HarbingerOfTheEnd/presence.nvim",
+}
