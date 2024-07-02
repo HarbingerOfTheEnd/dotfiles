@@ -20,6 +20,10 @@ end
 ensure_lazy_installed(fn.stdpath("data") .. "/site/pack/packer/start/lazy.nvim")
 
 require("lazy").setup("plugins", {
+    checker = {
+        enabled = true,
+        notify = false,
+    },
     change_detection = {
         notify = false,
     }
