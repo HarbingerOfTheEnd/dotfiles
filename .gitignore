@@ -33,3 +33,6 @@ zsdoc/data
 # Zunit tests' output
 /tests/_output/*
 !/tests/_output/.gitkeep
+
+# Lazy.nvim plugin's files
+lazy-lock.json
