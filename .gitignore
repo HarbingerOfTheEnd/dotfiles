@@ -36,3 +36,6 @@ zsdoc/data
 
 # Lazy.nvim plugin's files
 lazy-lock.json
+
+# Tmux plugin folder
+.config/tmux/plugins
