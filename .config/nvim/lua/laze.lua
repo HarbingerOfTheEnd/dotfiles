@@ -19,7 +19,7 @@ end
 
 ensure_lazy_installed(fn.stdpath("data") .. "/site/pack/packer/start/lazy.nvim")
 
-require("lazy").setup("plugins", {
+require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
     checker = {
         enabled = true,
         notify = false,
