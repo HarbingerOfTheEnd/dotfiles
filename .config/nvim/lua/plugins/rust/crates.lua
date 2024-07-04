@@ -1,8 +1,14 @@
 return {
-    "saecki/crates.nvim",
-    ft = { "rust", "toml" },
-    config = function(opts)
-        require("crates").setup(opts)
-        require("crates").show()
-    end,
+	"Saecki/crates.nvim",
+	ft = { "rust", "toml" },
+	config = function()
+		require("crates").setup({
+			completion = {
+				crates = {
+					enabled = true,
+				},
+			},
+		})
+		require("crates").show()
+	end,
 }
