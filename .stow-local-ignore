@@ -1,0 +1,6 @@
+.git*
+.gitmodules
+.gitignore
+!.gitconfig
+README.md
+LICENSE
