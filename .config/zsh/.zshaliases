@@ -1,0 +1,4 @@
+alias cls="clear"
+alias python="python3.13"
+alias cd="z"
+alias ls="eza --color=always --git --icons=always -1"
