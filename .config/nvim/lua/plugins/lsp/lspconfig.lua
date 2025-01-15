@@ -37,7 +37,7 @@ return {
                 keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 
                 opts.desc = "Smart rename"
-                keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+                keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
 
                 opts.desc = "Show buffer diagnostics"
                 keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
@@ -76,7 +76,7 @@ return {
             ["svelte"] = function()
                 lspconfig["svelte"].setup({
                     capabilities = capabilities,
-                    on_attach = function(client, bufnr)
+                    on_attach = function(client, _)
                         vim.api.nvim_create_autocmd("BufWritePost", {
                             pattern = { "*.js", "*.ts" },
                             callback = function(ctx)
