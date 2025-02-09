@@ -1,0 +1,10 @@
+[settings]
+location = "13.0827,80.2707"
+night_start = "sunset"
+night_end = "sunrise"
+temperature_night = 1000
+
+[logging]
+level = debug
+file = "/tmp/hyprsunset.log"
+
