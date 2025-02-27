@@ -6,7 +6,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	web-search
-  asdf
+    asdf
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -74,3 +74,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 [ -f "/home/harbingeroftheend/.ghcup/env" ] && . "/home/harbingeroftheend/.ghcup/env"
+
+fastfetch
