@@ -2,6 +2,7 @@
 # Zsh compiled script + zrecompile backup
 *.zwc
 *.zwc.old
+wlsunset.json
 
 # Zsh completion-optimization dumpfile
 *zcompdump*
