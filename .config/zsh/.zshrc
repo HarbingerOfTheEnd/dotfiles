@@ -75,4 +75,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 [ -f "/home/harbingeroftheend/.ghcup/env" ] && . "/home/harbingeroftheend/.ghcup/env"
 
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
+
 fastfetch
