@@ -3,7 +3,7 @@
 # weather info from wttr. https://github.com/chubin/wttr.in
 # Remember to add city 
 
-city="Chennai, India"
+city="Chennai, Tamil Nadu, India"
 cachedir=~/.cache/rbn
 cachefile=${0##*/}-$1
 
